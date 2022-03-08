@@ -8,7 +8,7 @@ forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback("Error message: " + body.error.info)
         } else {
-            callback(undefined, body.current.weather_descriptions[0] + ". It is currently " + body.current.temperature + " in " + body.location.name + ". It feels like " + body.current.feelslike + " outside");
+            callback(undefined, body.current.weather_descriptions[0] + ". It is currently " + body.current.temperature + " in " + body.location.name + ". It feels like " + body.current.feelslike + " outside and the humidity is: "+body.current.humidity);
         }
     });
 }
