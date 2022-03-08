@@ -1,1 +1,1 @@
-# Weather Application Sample
+# Weather Application
