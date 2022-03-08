@@ -1,9 +1,3 @@
-// fetch('http://localhost:3000/weather?address=!').then((response)=>{
-//     response.json().then((data) =>{
-//         console.log(data)
-//     })
-// });
-
 
 const weatherForm = document.querySelector('form');
 const search = document.querySelector('.address');
@@ -19,7 +13,7 @@ weatherForm.addEventListener('submit', (e) => {
         console.log("Uh oh! No address is provided");
         error.textContent = "Uh oh! No address is provided"
     } else {
-        fetch('http://localhost:3000/weather?address=' + address).then((response) => {
+        fetch('/weather?address=' + address).then((response) => {
             response.json().then((data) => {
                 if (data.error) {
                     error.textContent = data.error
